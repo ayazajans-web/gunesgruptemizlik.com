@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GÜNEŞ GRUP MAKİNA - Endüstriyel temizlik, hijyen ve ambalaj ürünlerinde güvenilir tedarikçi. Profesyonel temizlik ürünleri ve medikal malzemeler.">
+    <meta name="keywords" content="temizlik ürünleri, hijyen ürünleri, ambalaj, maske, galoş, eldiven, dezenfektan, temizlik makinesi">
+    <meta name="author" content="GÜNEŞ GRUP MAKİNA">
+    <meta property="og:title" content="GÜNEŞ GRUP MAKİNA - Temizlik ve Hijyen Ürünleri">
+    <meta property="og:description" content="Endüstriyel temizlik ve hijyen ürünlerinde güvenilir tedarikçi">
+    <meta property="og:type" content="website">
+    <title>GÜNEŞ GRUP MAKİNA - Temizlik ve Hijyen Ürünleri | Profesyonel Çözümler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #0066cc;
+            --primary-dark: #0052a3;
+            --secondary-color: #00a651;
+            --secondary-dark: #008542;
+            --accent-color: #ff6b35;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --text-lighter: #999;
+            --bg-light: #f8f9fa;
+            --bg-lighter: #fafbfc;
+            --white: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-md: 0 8px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 12px 28px rgba(0,0,0,0.15);
+            --shadow-hover: 0 8px 24px rgba(0,0,0,0.18);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Loading Animation */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .page-loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid var(--bg-light);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Top Info Bar */
+        .top-bar {
+            background: linear-gradient(135deg, var(--text-dark), #2a2a2a);
+            color: white;
+            padding: 0.75rem 0;
+            font-size: 0.875rem;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .top-bar-info {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .top-bar-item:hover {
+            opacity: 1;
+        }
+
+        .top-bar-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .social-icon:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Navbar Enhanced */
+        .navbar {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-image {
+            height: 60px;
+            width: auto;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-text span:first-child {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .logo-text span:last-child {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: var(--transition);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .mobile-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--text-dark);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Brand Partners Strip */
+        .brand-partners {
+            background: var(--white);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .brand-partners-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .brand-partners-label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-light);
+            white-space: nowrap;
+        }
+
+        .brand-partners-logos {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .brand-logo {
+            height: 35px;
+            width: auto;
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .brand-logo:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* Hero Section Enhanced */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 120px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            font-weight: 400;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            border: 2px solid white;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-4px);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--white);
+            padding: 60px 20px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stats-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60px;
+            background: var(--border-color);
+        }
+
+        .stat-item:last-child::after {
+            display: none;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        /* Section Styles Enhanced */
+        section {
+            padding: 100px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .section-title p {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* About Section Enhanced */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--text-light);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .about-text strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+            color: var(--text-dark);
+        }
+
+        .feature-content p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Categories Enhanced */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .category-card:hover .category-image {
+            transform: scale(1.05);
+        }
+
+        .category-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .category-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .category-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Products Enhanced */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-color);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--bg-light), var(--bg-lighter));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent, rgba(0,102,204,0.1));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-image::after {
+            opacity: 1;
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            letter-spacing: 0.3px;
+        }
+
+        .product-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .product-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .product-features {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .product-tag {
+            font-size: 0.75rem;
+            padding: 0.3rem 0.7rem;
+            background: var(--bg-light);
+            color: var(--text-light);
+            border-radius: 15px;
+        }
+
+        /* Catalog Section Enhanced */
+        .catalog-section {
+            background: linear-gradient(135deg, var(--bg-light), var(--bg-lighter));
+        }
+
+        .catalog-box {
+            background: white;
+            border-radius: 25px;
+            padding: 4rem;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            box-shadow: var(--shadow-md);
+            border: 2px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .catalog-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, transparent, rgba(0,102,204,0.05));
+            transform: rotate(45deg);
+        }
+
+        .catalog-box-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .catalog-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 25px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .catalog-box h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .catalog-box p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        /* Contact Enhanced */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: start;
+            gap: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-item-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item-content h3 {
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+        }
+
+        .contact-item-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .contact-item-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-item-content a:hover {
+            color: var(--secondary-color);
+        }
+
+        .map-container {
+            border-radius: 25px;
+            overflow: hidden;
+            height: 500px;
+            box-shadow: var(--shadow-md);
+            border: 2px solid var(--border-color);
+        }
+
+        /* WhatsApp Float Enhanced */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            color: white;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 998;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7);
+        }
+
+        .whatsapp-float::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #25D366;
+            opacity: 0.3;
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(1);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        /* Footer Enhanced */
+        footer {
+            background: linear-gradient(135deg, var(--text-dark), #2a2a2a);
+            color: white;
+            padding: 4rem 20px 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: white;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.75rem;
+            transition: var(--transition);
+            line-height: 1.6;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-color);
+            transform: translateX(5px);
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom-links {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* KVKK Cookie Popup */
+        .kvkk-popup {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 -5px 25px rgba(0,0,0,0.15);
+            padding: 2rem;
+            z-index: 9999;
+            transform: translateY(100%);
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .kvkk-popup.show {
+            transform: translateY(0);
+        }
+
+        .kvkk-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .kvkk-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .kvkk-text {
+            flex: 1;
+        }
+
+        .kvkk-text h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .kvkk-text p {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .kvkk-text a {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .kvkk-text a:hover {
+            text-decoration: underline;
+        }
+
+        .kvkk-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .kvkk-btn {
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 0.95rem;
+        }
+
+        .kvkk-accept {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .kvkk-accept:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .kvkk-decline {
+            background: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        .kvkk-decline:hover {
+            background: var(--border-color);
+        }
+
+        /* KVKK Modal */
+        .kvkk-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            padding: 20px;
+        }
+
+        .kvkk-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .kvkk-modal-content {
+            background: white;
+            border-radius: 25px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 3rem;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+            transform: scale(0.9);
+            transition: var(--transition);
+        }
+
+        .kvkk-modal.show .kvkk-modal-content {
+            transform: scale(1);
+        }
+
+        .kvkk-modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-light);
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .kvkk-modal-close:hover {
+            background: var(--border-color);
+            transform: rotate(90deg);
+        }
+
+        .kvkk-modal h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .kvkk-modal h3 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .kvkk-modal p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .kvkk-modal ul {
+            margin-left: 2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .kvkk-modal ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 110px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 998;
+            box-shadow: var(--shadow);
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .brand-partners-content {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .top-bar-info {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 1.5rem;
+                box-shadow: var(--shadow-md);
+                display: none;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu a::after {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .stat-item::after {
+                display: none;
+            }
+
+            .about-content,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .kvkk-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .kvkk-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .kvkk-btn {
+                width: 100%;
+            }
+
+            .kvkk-modal-content {
+                padding: 2rem;
+            }
+
+            .footer-bottom-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .brand-partners-logos {
+                gap: 2rem;
+            }
+
+            .brand-logo {
+                height: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .logo-image {
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-info">
+                <div class="top-bar-item">
+                    <span>📱</span>
+                    <span><a href="tel:+905413771882" style="color:white; text-decoration:none;">0541 377 18 82</a></span>
+                </div>
+                <div class="top-bar-item">
+                    <span>✉️</span>
+                    <span>emrebld.06@gmail.com</span>
+                </div>
+            </div>
+            <style>
+            .top-bar-social i{
+                color:#ffffff !important;
+            }
+            </style>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+            <div class="top-bar-social">
+                <a href="https://wa.me/905413771882" class="social-icon" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="https://instagram.com/" class="social-icon" title="Instagram">
+        <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://facebook.com/" class="social-icon" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="logo.webp" alt="Güneş Grup Logo" class="logo-image">
+                <div class="logo-text">
+                    <span>GÜNEŞ GRUP</span>
+                    <span>Temizlik & Hijyen</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#ana-sayfa">Ana Sayfa</a></li>
+                <li><a href="#kurumsal">Kurumsal</a></li>
+                <li><a href="#kategoriler">Kategoriler</a></li>
+                <li><a href="#urunler">Ürünler</a></li>
+                <li><a href="#katalog">Katalog</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+            <div class="mobile-toggle" id="mobileToggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="ana-sayfa" class="hero">
+        <div class="hero-content">
+            <h1>Endüstriyel Temizlik ve Hijyen Ürünlerinde Güvenilir Tedarikçi</h1>
+            <p>Güneş Grup Makina Temizlik Ambalaj Gıda Ltd. Şti. temizlik, hijyen ve ambalaj ürünleri alanında geniş ürün portföyü ile hizmet vermektedir.</p>
+            <div class="btn-group">
+                <a href="#urunler" class="btn btn-primary">
+                    <span>📦</span>
+                    Ürünleri İncele
+                </a>
+                <a href="https://wa.me/905413771882" class="btn btn-secondary" target="_blank">
+                    <span>💬</span>
+                    WhatsApp Sipariş
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-count="500">0</div>
+                <div class="stat-label">Mutlu Müşteri</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="1000">0</div>
+                <div class="stat-label">Ürün Çeşidi</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="15">0</div>
+                <div class="stat-label">Yıllık Tecrübe</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-count="7">0</div>
+                <div class="stat-label">Kategori</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="kurumsal">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">Hakkımızda</span>
+                <h2>Kalite ve Güvenin Adresi</h2>
+                <p>15 yıllık tecrübemizle sektörde lider konumdayız</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>GÜNEŞ GRUP</strong> Ambalaj Temizlik ürünleri, endüstriyel temizlik malzemeleri, galoş, maske, bone, önlük çeşitleri, tulum, sedye örtüsü ve kolluk çeşitleriyle <strong>ATB İş Merkezi</strong> ve <strong>Artisan Sanayi Sitesi'nde</strong> hizmet vermektedir.</p>
+                    <p>Galoş, maske, bone, önlük çeşitleri, tulum, sedye örtüsü ve kolluk çeşitlerini <strong>kendi bünyesinde üreten</strong> firmamız, ürün portföyünü sürekli yenileyerek kurumların bu alandaki tüm ihtiyaçlarını tek noktadan karşılayabilmelerine olanak vermek için var gücüyle çalışmaktadır.</p>
+                    <p>Dağıtım ağı sayesinde ürünleri alıcı firmaların adreslerine teslim eden kuruluşumuz, müşteri memnuniyetini baz alarak faaliyetlerine devam etmektedir.</p>
+                    <p>Resmi kurumların yanı sıra; <strong>özel hastane, özel okul, kafe, restoran ve otel</strong> gibi işletmelere de hizmet veren firmamız, kalite anlayışından ödün vermeden hizmet vermeye devam etmektedir.</p>
+                </div>
+                <div class="features">
+                    <div class="feature-item">
+                        <div class="feature-icon">🏥</div>
+                        <div class="feature-content">
+                            <h4>Medikal Alan</h4>
+                            <p>Hastaneler için özel ürünler</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏫</div>
+                        <div class="feature-content">
+                            <h4>Eğitim Kurumları</h4>
+                            <p>Okullar için temizlik çözümleri</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🍽️</div>
+                        <div class="feature-content">
+                            <h4>Gıda Sektörü</h4>
+                            <p>Kafe ve restoranlar için</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🏨</div>
+                        <div class="feature-content">
+                            <h4>Konaklama</h4>
+                            <p>Oteller için hijyen ürünleri</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="kategoriler" style="background: var(--bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">Kategorilerimiz</span>
+                <h2>Ürün Kategorileri</h2>
+                <p>Geniş ürün yelpazesi ile hizmetinizdeyiz</p>
+            </div>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <img src="00.webp" alt="Kişisel Temizlik ve Hijyen" class="category-image">
+                    <div class="category-content">
+                        <h3>Kişisel Temizlik ve Hijyen Ürünleri</h3>
+                        <p>Maske, eldiven, galoş, bone, önlük ve daha fazlası</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="01.webp" alt="Mutfak Hijyen" class="category-image">
+                    <div class="category-content">
+                        <h3>Mutfak Hijyen Ürünleri</h3>
+                        <p>Bulaşık deterjanları, dezenfektanlar, temizlik ürünleri</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="02.webp" alt="Zemin Yıkama" class="category-image">
+                    <div class="category-content">
+                        <h3>Zemin Yıkama ve Cila Makinaları</h3>
+                        <p>Endüstriyel temizlik makineleri ve ekipmanları</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="03.webp" alt="Üretim" class="category-image">
+                    <div class="category-content">
+                        <h3>Üretim ve Ambalaj</h3>
+                        <p>Kendi üretimimiz medikal ve hijyen ürünleri</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="04.webp" class="category-image">
+                    <div class="category-content">
+                        <h3>Temizlik Kağıdı Ürünleri</h3>
+                        <p>Kağıt havlu, tuvalet kağıdı, peçete, dispenser ürünleri</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="06.webp" class="category-image">
+                    <div class="category-content">
+                        <h3>Sarf Malzemeleri ve Aparatlar</h3>
+                        <p>Dispenserler, çöp kovaları, temizlik setleri</p>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="07.webp" class="category-image">
+                    <div class="category-content">
+                        <h3>Tekstil Hijyen Ürünleri</h3>
+                        <p>Çamaşır deterjanları, yumuşatıcılar, leke çıkarıcılar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="urunler">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">Ürünlerimiz</span>
+                <h2>Öne Çıkan Ürünler</h2>
+                <p>Kaliteli ve güvenilir ürünlerimiz</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">😷</div>
+                    <div class="product-info">
+                        <span class="product-category">Kişisel Hijyen</span>
+                        <h3>Yüz Maskesi</h3>
+                        <p>3 katmanlı, %99 koruma sağlayan cerrahi maske. Beyaz, mavi, yeşil ve siyah renk seçenekleri.</p>
+                        <div class="product-features">
+                            <span class="product-tag">Lateks İçermez</span>
+                            <span class="product-tag">50 Adet</span>
+                            <span class="product-tag">3 Katlı</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🧤</div>
+                    <div class="product-info">
+                        <span class="product-category">Kişisel Hijyen</span>
+                        <h3>Nitril Muayene Eldiveni</h3>
+                        <p>Pudrasız, sentetik lateks kopolimer, yüksek kimyasal dayanım.</p>
+                        <div class="product-features">
+                            <span class="product-tag">Pudrasız</span>
+                            <span class="product-tag">100 Adet</span>
+                            <span class="product-tag">XS-XL Beden</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">👟</div>
+                    <div class="product-info">
+                        <span class="product-category">Kişisel Hijyen</span>
+                        <h3>Galoş</h3>
+                        <p>Beyaz ve mavi renk seçenekleri, kalın lastikli, 1000 adet paket.</p>
+                        <div class="product-features">
+                            <span class="product-tag">1000 Adet</span>
+                            <span class="product-tag">Kalın Lastik</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🧴</div>
+                    <div class="product-info">
+                        <span class="product-category">Kişisel Hijyen</span>
+                        <h3>Alkol Bazlı El Dezenfektanı</h3>
+                        <p>%74,6 alkol içeren, bakteriyostatik etkili el dezenfektanı.</p>
+                        <div class="product-features">
+                            <span class="product-tag">%74,6 Alkol</span>
+                            <span class="product-tag">5L</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🧽</div>
+                    <div class="product-info">
+                        <span class="product-category">Mutfak Hijyen</span>
+                        <h3>Bulaşık Makinesi Deterjanı</h3>
+                        <p>Endüstriyel bulaşık makineleri için özel formül deterjan.</p>
+                        <div class="product-features">
+                            <span class="product-tag">Endüstriyel</span>
+                            <span class="product-tag">20L</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">✨</div>
+                    <div class="product-info">
+                        <span class="product-category">Genel Temizlik</span>
+                        <h3>Genel Temizlik Ürünü</h3>
+                        <p>Tüm yüzeyler için çok amaçlı temizlik sıvısı.</p>
+                        <div class="product-features">
+                            <span class="product-tag">Çok Amaçlı</span>
+                            <span class="product-tag">5L-20L</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🧻</div>
+                    <div class="product-info">
+                        <span class="product-category">Kağıt Ürünleri</span>
+                        <h3>Z-Katlama Dispenser Havlu</h3>
+                        <p>Premium kalite, 2 katlı, 200 yaprak dispenser havlu.</p>
+                        <div class="product-features">
+                            <span class="product-tag">2 Katlı</span>
+                            <span class="product-tag">200 Yaprak</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">🚽</div>
+                    <div class="product-info">
+                        <span class="product-category">Kağıt Ürünleri</span>
+                        <h3>Tuvalet Kağıdı</h3>
+                        <p>Premium kalite, 3 katlı, yumuşak tuvalet kağıdı.</p>
+                        <div class="product-features">
+                            <span class="product-tag">3 Katlı</span>
+                            <span class="product-tag">24 Rulo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="katalog" class="catalog-section">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">E-Katalog</span>
+                <h2>Ürün Kataloğu</h2>
+                <p>Tüm ürünlerimizi detaylı olarak inceleyin</p>
+            </div>
+            <div class="catalog-box">
+                <div class="catalog-box-content">
+                    <div class="catalog-icon">📑</div>
+                    <h3>2022 Ürün Kataloğu</h3>
+                    <p style="margin: 1.5rem 0; color: var(--text-light);">Tüm ürünlerimizi, teknik özelliklerini ve detaylı bilgilerini içeren güncel kataloğumuzu PDF formatında indirebilirsiniz.</p>
+                    <a href="KATALOG-TASARIM-04_04_2022.pdf" class="btn btn-primary" download style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <span>⬇️</span>
+                        Kataloğu İndir (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Partners -->
+    <div class="brand-partners">
+        <div class="brand-partners-content">
+            <div class="brand-partners-label">İş Ortaklarımız:</div>
+            <div class="brand-partners-logos">
+                <img src="05.webp" alt="Brand Partners" class="brand-logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="iletisim">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle">Bize Ulaşın</span>
+                <h2>İletişim</h2>
+                <p>Sorularınız için bizimle iletişime geçin</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📱</div>
+                        <div class="contact-item-content">
+                            <h3>WhatsApp Sipariş</h3>
+                            <p><a href="https://wa.me/905413771882" target="_blank">0541 377 18 82</a></p>
+                            <p><a href="https://wa.me/905348880731" target="_blank">0534 888 07 31</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">✉️</div>
+                        <div class="contact-item-content">
+                            <h3>E-posta</h3>
+                            <p><a href="mailto:emrebld.06@gmail.com">emrebld.06@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <div class="contact-item-content">
+                            <h3>Adres</h3>
+                            <p>Anadolu Bulvarı Gimat Toptancılar Sitesi<br>13. Blok No: 370 Macunköy<br>Yenimahalle / ANKARA</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">🌐</div>
+                        <div class="contact-item-content">
+                            <h3>Web Sitesi</h3>
+                            <p><a href="http://www.gunesgruptemizlik.com" target="_blank">www.gunesgruptemizlik.com</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3058.6574777537676!2d32.7899!3d39.9847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU5JzA1LjAiTiAzMsKwNDcnMjMuNiJF!5e0!3m2!1str!2str!4v1234567890"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="logo.webp" alt="Güneş Grup Logo">
+                    <span>GÜNEŞ GRUP</span>
+                </div>
+                <p>Temizlik Ambalaj Gıda Ltd. Şti.</p>
+                <p style="margin-top: 1rem;">Endüstriyel temizlik ve hijyen ürünlerinde güvenilir çözüm ortağınız. 15 yıllık tecrübemizle sektörde lider konumdayız.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hızlı Linkler</h3>
+                <a href="#ana-sayfa">Ana Sayfa</a>
+                <a href="#kurumsal">Kurumsal</a>
+                <a href="#kategoriler">Kategoriler</a>
+                <a href="#urunler">Ürünler</a>
+                <a href="#katalog">Katalog</a>
+                <a href="#iletisim">İletişim</a>
+            </div>
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p>📱 0541 377 18 82</p>
+                <p>📱 0534 888 07 31</p>
+                <p>✉️ emrebld.06@gmail.com</p>
+                <p>🌐 www.gunesgruptemizlik.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>Çalışma Saatleri</h3>
+                <p>Pazartesi - Cumartesi</p>
+                <p>09:00 - 18:00</p>
+                <p style="margin-top: 1rem;">Pazar: Kapalı</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 GÜNEŞ GRUP MAKİNA TEMİZLİK AMBALAJ GIDA LTD.ŞTİ. Tüm hakları saklıdır.</p>
+            <div class="footer-bottom-links">
+                <a href="#" onclick="openKvkkModal(); return false;">KVKK ve Gizlilik Politikası</a>
+                <a href="#" onclick="openKvkkModal(); return false;">Kişisel Verilerin Korunması</a>
+                <a href="#iletisim">İletişim</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- KVKK Cookie Popup -->
+    <div class="kvkk-popup" id="kvkkPopup">
+        <div class="kvkk-content">
+            <div class="kvkk-icon">🔒</div>
+            <div class="kvkk-text">
+                <h4>Çerezler ve Gizlilik</h4>
+                <p>Web sitemizde size daha iyi hizmet sunabilmek için çerezleri kullanıyoruz. Çerez politikamız ve kişisel verilerinizin işlenmesi hakkında detaylı bilgi için <a href="#" onclick="openKvkkModal(); return false;">KVKK Aydınlatma Metni</a>'ni inceleyebilirsiniz.</p>
+            </div>
+            <div class="kvkk-buttons">
+                <button class="kvkk-btn kvkk-accept" onclick="acceptKvkk()">Kabul Et</button>
+                <button class="kvkk-btn kvkk-decline" onclick="declineKvkk()">Reddet</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- KVKK Modal -->
+    <div class="kvkk-modal" id="kvkkModal" onclick="closeKvkkModal(event)">
+        <div class="kvkk-modal-content" onclick="event.stopPropagation()">
+            <button class="kvkk-modal-close" onclick="closeKvkkModal()">&times;</button>
+            <h2>KVKK Aydınlatma Metni ve Kişisel Verilerin Korunması</h2>
+            
+            <h3>1. Veri Sorumlusu</h3>
+            <p>6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, kişisel verileriniz; veri sorumlusu olarak GÜNEŞ GRUP MAKİNA TEMİZLİK AMBALAJ GIDA LTD.ŞTİ. tarafından aşağıda açıklanan kapsamda işlenebilecektir.</p>
+
+            <h3>2. Kişisel Verilerin Hangi Amaçla İşleneceği</h3>
+            <p>Toplanan kişisel verileriniz, KVKK'nın 5. ve 6. maddelerinde belirtilen kişisel veri işleme şartları ve amaçları dahilinde:</p>
+            <ul>
+                <li>Ürün ve hizmetlerimizin sunulması</li>
+                <li>Müşteri ilişkilerinin yönetimi</li>
+                <li>Sipariş ve taleplerin karşılanması</li>
+                <li>İletişim faaliyetlerinin yürütülmesi</li>
+                <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+                <li>İstatistiksel analiz ve raporlama</li>
+            </ul>
+            <p>amaçlarıyla işlenecektir.</p>
+
+            <h3>3. İşlenen Kişisel Verilerin Kimlere ve Hangi Amaçla Aktarılabileceği</h3>
+            <p>Toplanan kişisel verileriniz; yukarıda belirtilen amaçların gerçekleştirilmesi doğrultusunda iş ortaklarımıza, tedarikçilerimize, kanunen yetkili kamu kurumlarına ve özel kişilere KVKK'nın 8. ve 9. maddelerinde belirtilen kişisel veri işleme şartları ve amaçları çerçevesinde aktarılabilecektir.</p>
+
+            <h3>4. Kişisel Veri Toplamanın Yöntemi ve Hukuki Sebebi</h3>
+            <p>Kişisel verileriniz, web sitesi üzerinden elektronik ortamda otomatik yollarla toplanmaktadır. KVKK'nın 5. ve 6. maddelerinde belirtilen kişisel veri işleme şartları ve amaçları çerçevesinde işlenmektedir.</p>
+
+            <h3>5. Kişisel Veri Sahibinin KVKK'nın 11. Maddesinde Sayılan Hakları</h3>
+            <p>Kişisel veri sahipleri olarak, haklarınıza ilişkin taleplerinizi aşağıda düzenlenen yöntemlerle firmamıza iletmeniz durumunda talebiniz en geç 30 gün içinde sonuçlandırılacaktır. KVKK'nın 11. maddesi gereğince kişisel veri sahipleri:</p>
+            <ul>
+                <li>Kişisel veri işlenip işlenmediğini öğrenme,</li>
+                <li>Kişisel verileri işlenmişse buna ilişkin bilgi talep etme,</li>
+                <li>Kişisel verilerin işlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme,</li>
+                <li>Yurt içinde veya yurt dışında kişisel verilerin aktarıldığı üçüncü kişileri bilme,</li>
+                <li>Kişisel verilerin eksik veya yanlış işlenmiş olması hâlinde bunların düzeltilmesini isteme,</li>
+                <li>İlgili mevzuatta öngörülen şartlar çerçevesinde kişisel verilerin silinmesini veya yok edilmesini isteme,</li>
+                <li>Kişisel verilerin düzeltilmesi, silinmesi veya yok edilmesine ilişkin işlemlerin kişisel verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme,</li>
+                <li>İşlenen verilerin münhasıran otomatik sistemler vasıtasıyla analiz edilmesi suretiyle kişinin kendisi aleyhine bir sonucun ortaya çıkmasına itiraz etme,</li>
+                <li>Kişisel verilerin kanuna aykırı olarak işlenmesi sebebiyle zarara uğraması hâlinde zararın giderilmesini talep etme</li>
+            </ul>
+            <p>haklarına sahiptir.</p>
+
+            <h3>6. Çerez Politikası</h3>
+            <p>Web sitemizde kullanıcı deneyimini iyileştirmek amacıyla çerezler kullanılmaktadır. Çerezler, web sitesinin düzgün çalışması ve kullanıcı tercihlerinin hatırlanması için gereklidir.</p>
+
+            <h3>7. İletişim</h3>
+            <p>KVKK kapsamındaki haklarınızı kullanmak için <strong>emrebld.06@gmail.com</strong> e-posta adresinden veya <strong>Anadolu Bulvarı Gimat Toptancılar Sitesi 13. Blok No: 370 Macunköy Yenimahalle/ANKARA</strong> adresinden bizimle iletişime geçebilirsiniz.</p>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/905413771882" class="whatsapp-float" target="_blank" title="WhatsApp Sipariş">
+        💬
+    </a>
+
+    <!-- Scroll to Top -->
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        ↑
+    </div>
+
+    <script>
+        // Page Loader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('pageLoader').classList.add('hidden');
+            }, 500);
+        });
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const mobileToggle = document.getElementById('mobileToggle');
+            navMenu.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    document.getElementById('navMenu').classList.remove('active');
+                    document.getElementById('mobileToggle').classList.remove('active');
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const scrollTop = document.getElementById('scrollTop');
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                navbar.classList.add('scrolled');
+                scrollTop.classList.add('show');
+            } else {
+                navbar.classList.remove('scrolled');
+                scrollTop.classList.remove('show');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Stats counter animation
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-count'));
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        // Intersection Observer for stats
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counters = entry.target.querySelectorAll('.stat-number');
+                    counters.forEach(counter => {
+                        if (!counter.classList.contains('counted')) {
+                            animateCounter(counter);
+                            counter.classList.add('counted');
+                        }
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-container');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // KVKK Functions
+        function showKvkkPopup() {
+            const kvkkAccepted = localStorage.getItem('kvkkAccepted');
+            if (!kvkkAccepted) {
+                setTimeout(() => {
+                    document.getElementById('kvkkPopup').classList.add('show');
+                }, 2000);
+            }
+        }
+
+        function acceptKvkk() {
+            localStorage.setItem('kvkkAccepted', 'true');
+            document.getElementById('kvkkPopup').classList.remove('show');
+        }
+
+        function declineKvkk() {
+            document.getElementById('kvkkPopup').classList.remove('show');
+        }
+
+        function openKvkkModal() {
+            document.getElementById('kvkkModal').classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeKvkkModal(event) {
+            if (!event || event.target.id === 'kvkkModal') {
+                document.getElementById('kvkkModal').classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Show KVKK popup on page load
+        showKvkkPopup();
+
+        // Close modal on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeKvkkModal();
+            }
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.category-card, .product-card, .feature-item, .contact-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
